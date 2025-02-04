@@ -5,7 +5,7 @@ dist
 index.html
 .remote-assets
 components.d.ts
-slides-with-clicks.pdf
-slides.pdf
+slides-export.pdf
+slides-export-notes.pdf
 *.log
 .yarn/

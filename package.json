@@ -6,7 +6,8 @@
     "build": "slidev build src/slides.md --out ../dist && mkdir -p dist/assets/rive && cp src/assets/rive/*.riv dist/assets/rive/",
     "dev": "slidev src/slides.md --open",
     "export": "slidev export src/slides.md",
-    "export-notes": "slidev export-notes src/slides.md"
+    "serve": "npx serve dist",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@rive-app/canvas": "^2.7.6",
