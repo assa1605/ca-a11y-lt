@@ -36,6 +36,8 @@
     }
   },
   "devDependencies": {
-    "@types/node": "^22.13.0"
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.13.0",
+    "fs-extra": "^11.3.0"
   }
 }
