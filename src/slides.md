@@ -1,9 +1,7 @@
 ---
-title: PYRA 4 Introduction
+title: Rive アニメーションとアクセシビリティ
 theme: ./
 defaults:
-    subtitle: Slidev Template | Professorship of Environmental Sensing and Modeling (ESM)
-    tumLogo: blue
 layout: cover
 hideInToc: true
 ---
@@ -37,11 +35,10 @@ layout: default
   </div>
 </div>
 
----
-
+<!-- 
 # アジェンダ
 
-<Toc maxDepth="2"/>
+<Toc maxDepth="1"/> -->
 
 ---
 layout: default
@@ -51,18 +48,45 @@ layout: default
 
 - インタラクティブなアニメーションを作成・実装するためのツール
 - クロスプラットフォーム対応
-    - React, Vue, Angular、React Native, Flutter, iOS, Android, C#
+    - React, Vue, Angular, React Native, Flutter, iOS, Android, C#
 
 <div class="flex justify-center">
     <img src="/assets/slides/dragon.gif" class="w-80"/>
 </div>
 
+<div class="text-sm text-center italic">
+  引用：<a href="https://rive.app/">https://rive.app/</a>
+</div>
 
+---
+
+# Rive アニメーション活用例
+
+<div class="pt-16">
+  <div class="flex flex-row gap-8 justify-center">
+    <div class="flex flex-col items-center gap-2">
+      <div class="text-lg font-medium">Like</div>
+      <LikeRiveAnimation />
+    </div>
+    <div class="flex flex-col items-center gap-2">
+      <div class="text-lg font-medium">Rating</div>
+      <StarsRiveAnimation />
+    </div>
+    <div class="flex flex-col items-center gap-2">
+      <div class="text-lg font-medium">404</div>
+      <EmptyRiveAnimation />
+    </div>
+  </div>
+</div>
+
+<div class="absolute bottom-8 right-8">
+  <img src="/assets/slides/qr.png" class="w-32"/>
+</div>
 
 ---
 layout: two-cols
 ---
-## Riveのメリット👏
+## Riveのメリット
 
 - 複雑なアニメーションの作成が簡単(プログラミング不要)
 - 作ったアニメーションをGUI上ですぐに確認
@@ -81,119 +105,60 @@ layout: two-cols
 </div>
 
 
-
----
-layout: default
----
-
-# アクセシビリティの考慮
-
-## Rive 公式による実装例
-
-- **ARIA live regions のコントロール**
-    - 動的コンテンツの変更を支援技術に通知
-    - スクリーンリーダーユーザーへのアニメーション説明
-
-## prefers-reduced-motionの活用
-
-- ユーザーの設定に応じてアニメーションを調整
-- 動きによる不快感を軽減
-- OS設定との連携
-    - Windows 10：設定 > 簡単操作 > ディスプレイ
-    - macOS：システム設定 > アクセシビリティ > 表示
-    - iOS：設定 > アクセシビリティ > 視覚効果を減らす
-    - Android：設定 > ユーザー補助 > アニメーション
-
----
-
-# Rive について
-
--   `default`
--   `cover`
--   `text-image-split`
--   `two-cols`
--   `center`
-
----
-
-## Layout `default`
-
-Eu mollit nulla voluptate dolore dolore tempor velit aliqua cillum irure quis ea. Aute laboris sit quis aliquip tempor elit adipisicing duis in sint sit eiusmod exercitation consectetur. Ut deserunt qui veniam dolore sint excepteur. Occaecat minim ea eu esse enim deserunt veniam ad ullamco nostrud est.
-
 ---
 layout: cover
 hideInToc: true
 ---
 
-# Layout `cover` (Primary Heading)
-
-## Secondary Heading
-
----
-layout: text-image-split
----
-
-## Layout `text-image-split`
-
-Anim elit reprehenderit sunt occaecat ut et enim consequat exercitation do excepteur. Deserunt esse ipsum exercitation in Lorem sunt culpa cillum officia. Aute sit commodo ex ullamco consequat aute et cupidatat excepteur. Duis labore et est eu exercitation aliquip.
-
-Aute voluptate consectetur cillum nulla aliqua incididunt non est sunt aliqua ut consectetur do. Sint quis amet est ex ea enim laborum culpa consequat nostrud labore. Enim laboris aliqua excepteur eiusmod officia exercitation fugiat et. Nostrud fugiat sint amet veniam reprehenderit ex deserunt officia tempor esse aliqua sint dolore laboris. Consectetur cupidatat et irure cupidatat.
-
-::right::
-
-<img src="https://images.unsplash.com/photo-1612334001559-947862cc2202?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" style="width: 300px; border-radius: 0.5rem;"/>
+# `アクセシビリティへ`の考慮
+## WCAGの達成基準とセットで紹介
 
 ---
-
-layout: two-cols
+layout: default
 ---
+## ARIA live regions のコントロール
 
-## Layout `two-cols`
+### WCAGの達成基準
 
-Mollit amet mollit et aliquip tempor ipsum enim ad et adipisicing exercitation magna. Ullamco commodo laboris nostrud quis sit est laborum Lorem irure sint enim exercitation exercitation. Culpa consectetur nulla non ipsum. Enim magna adipisicing et velit dolore reprehenderit aliquip do Lorem id officia. Mollit sint nisi nulla sunt dolore voluptate sint ipsum sit. Mollit magna esse cupidatat qui laborum veniam ipsum ex dolor.
+> 達成基準 4.1.3: ステータスメッセージを理解する
 
-::right::
+- **Rive 公式による実装例**
+    - [Accesible web animations: ARIA live regions](https://rive.app/blog/accesible-web-animations-aria-live-regions)
+    - 動的コンテンツの変更を支援技術に通知
+    - スクリーンリーダーユーザーへのアニメーション説明
 
-Adipisicing Lorem et quis magna consequat ut irure tempor eu dolor nisi. Do irure in cupidatat laborum occaecat officia non nisi non amet mollit duis ullamco. Duis amet velit sint consectetur. Fugiat magna cillum cillum do voluptate. Dolore fugiat voluptate veniam sint dolor anim.
 
-Sunt ex ut ad nisi laboris veniam qui fugiat ex. Labore quis ipsum pariatur incididunt ad qui Lorem ipsum est minim labore ipsum dolore labore. Proident aliqua fugiat ex consectetur ullamco anim aliquip nostrud in in veniam reprehenderit ad.
 
 ---
+layout: default
+---
+## prefers-reduced-motion を活用したアニメーションの制御
 
-# Markdown Examples
+### WCAGの達成基準
 
--   headings
--   text formatting
--   math
--   icons
--   code blocks
--   tables
--   lists
--   quotes
+> 達成基準 2.2.2 一時停止、停止、非表示
+
+
+> 達成基準 2.3.3 インタラクションによるアニメーション
+
+
+### prefers-reduced-motion とは
+ユーザーの環境設定によって余計な動きを抑制することを要求したことを検出するメディアクエリ。アニメーションを何らかの方法で無効にできることを達成するために使用。
+
 
 
 ---
 
-## Text Formatting
+## prefers-reduced-motion の使い方
 
-Adipisicing **bold text** officia ea. Reprehenderit reprehenderit voluptate occaecat do _italic text_. Quis nisi qui reprehenderit <span class="text-green-700 bg-green-100 px-1 rounded font-semibold">consectetur incididunt officia</span> anim pariatur exercitation. <span class="text-red-700 bg-red-100 px-1 rounded font-semibold">Ipsum quit</span> veniam mollit dolore aliqua officia.
+`no-preference` : ユーザーがアニメーションを無効にする設定をしていない場合
 
-You can also use subscript (O<sub>2</sub>) or superscript (x<sup>2</sup>).
+`reduce` ：ユーザーがアニメーションを無効にする設定をしている場合
 
----
-
-
-## Code Blocks
-
-<br/>
-
-**prefers-reduced-motionの設定を:**
+**prefers-reduced-motionの設定を検出する hooks**
 
 ```ts
-"use client";
-
 import { useEffect, useState } from "react";
-
 export const usePrefersReducedMotion = () => {
   const [isPrefersReducedMotion, setIsPrefersReducedMotion] = useState(false);
 
@@ -207,78 +172,47 @@ export const usePrefersReducedMotion = () => {
 };
 
 ```
+---
+
+## Rive ファイルに対して適用
+
+**アニメーションを発火しない設定**
+
+```ts
+　import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
+  const isPrefersReducedMotion = usePrefersReducedMotion();
+
+  const { rive, RiveComponent: RiveLikeComponent } = useRive({
+    src: likeRivUrl,
+    stateMachines: riveValue.like.stateMachine,
+    autoplay: false,
+  });
+
+  const stateMachineInputAnimation = useStateMachineInput(
+    rive,
+    riveValue.like.stateMachine,
+    riveValue.like.inputName.animation,
+    !isPrefersReducedMotion, // ←これ
+  );
+```
 
 ---
 
+## 実際に体験してみよう！
 
-
-## Lists
-
-**Ordered lists:**
-
-1. a
-2. bc
-3. def
-
-<br/>
-
-**Unordered lists:**
-
--   ghij
--   klmno
--   pqrstu
-
----
-
-## Quotes
-
-> Nulla cillum pariatur cillum velit nisi incididunt proident nostrud.
-
-Pariatur quis nisi et incididunt id ea labore adipisicing dolore pariatur Lorem ut aute. Velit deserunt dolore ullamco enim. Magna laborum nostrud nulla eiusmod nisi quis ad duis elit. Qui dolore enim occaecat anim mollit elit elit incididunt aliqua. Magna elit adipisicing nisi nisi ad tempor dolore tempor veniam deserunt consectetur nisi. Duis nulla deserunt laboris veniam ullamco.
-
-> Irure officia cillum consectetur elit duis ex quis laboris.
-
-Eu amet non ad mollit dolore culpa laborum sunt eiusmod amet ipsum sit elit. Enim consectetur nostrud sunt id ad minim proident do nulla ullamco eu. Sint sunt cillum eu dolore nisi consequat id. Pariatur dolore nostrud voluptate fugiat enim veniam veniam. Nisi qui sint in minim aliqua sunt dolore qui et veniam quis dolor consequat. Pariatur laboris cupidatat aliqua ipsum sunt exercitation dolor.
-
-
-This is a demo presentation containing the features of our template for [**Slidev**](https://sli.dev/). Slidev is a markdown presentation tool - a mixture of PowerPoint and Latex - write your presentation in a plain text file using markdown syntax and the PDF will be rendered by Slidev. You don't have to worry about formatting and can focus on the content. Your presentations will look consistent and simple.
-
-<br/>
-
-**How to get started:**
-
-1. Read the Slidev intro: https://sli.dev/guide/
-2. Get familiar with the file structure: https://sli.dev/guide/syntax.html
-3. Look into the demo document: [Markdown file](https://github.com/dostuffthatmatters/pyra-4-presentation/blob/main/docs/slides.example.md?plain=1) | [PDF](https://github.com/dostuffthatmatters/pyra-4-presentation/blob/main/docs/slides.example.pdf).
-4. Create your own presentation by cloning or forking [this template repository](https://github.com/tum-esm/tum-esm-slidev-template)
-
-<br/>
-
-If you have **issues, comments, or ideas for this template**, please create an issue [here](https://github.com/tum-esm/tum-esm-slidev-template/issues).
+通常表示とreduced-motion時の比較
 
 
 
----
 
-# Rive アニメーション
+- macOS：システム設定 > アクセシビリティ > 表示 > 動きの抑制
+- iOS：設定 > 一般 > アクセシビリティ > 視覚効果を減らす
+- Android 9 以上：設定 > ユーザー補助 > アニメーションの削除
 
-<div class="pt-24">
-  <div class="flex flex-row gap-8 justify-center">
-    <div class="flex flex-col items-center gap-2">
-      <div class="text-lg font-medium">Like</div>
-      <LikeRiveAnimation />
-    </div>
-    <div class="flex flex-col items-center gap-2">
-      <div class="text-lg font-medium">Rating</div>
-      <StarsRiveAnimation />
-    </div>
-    <div class="flex flex-col items-center gap-2">
-      <div class="text-lg font-medium">404</div>
-      <EmptyRiveAnimation />
-    </div>
-  </div>
+
+<div class="absolute bottom-8 right-8">
+  <img src="/assets/slides/qr.png" class="w-32"/>
 </div>
-
 
 
 ---
@@ -289,5 +223,3 @@ layout: center
 
 アクセシビリティに配慮したアニメーションで、
 より良いユーザー体験を提供しましょう
-
----
