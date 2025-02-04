@@ -34,7 +34,7 @@ onMounted(() => {
   try {
     console.log("Initializing Rive animation...");
     const r = new Rive({
-      src: "/assets/rive/like.riv",
+      src: "/like.riv",
       canvas: canvas.value,
       stateMachines: "State Machine 1",
       autoplay: true,

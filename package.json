@@ -1,43 +1,25 @@
 {
-  "name": "pyra-4-introduction",
+  "name": "ca-a11y-lt",
+  "type": "module",
   "private": true,
   "scripts": {
-    "dev": "slidev src/slides.md --port 3007 --open",
-    "build": "slidev build src/slides.md --out ../dist"
+    "build": "slidev build src/slides.md --out dist && mkdir -p dist/assets/rive && cp src/assets/rive/*.riv dist/assets/rive/",
+    "dev": "slidev src/slides.md --open",
+    "export": "slidev export src/slides.md",
+    "export-notes": "slidev export-notes src/slides.md"
   },
   "dependencies": {
-    "@iconify-json/tabler": "^1.1.100",
-    "@rive-app/canvas": "^2.25.7",
+    "@rive-app/canvas": "^2.7.6",
     "@slidev/cli": "^0.45.0",
-    "@slidev/theme-default": "^0.21.2",
-    "@slidev/types": "^0.45.0",
-    "@vueuse/core": "^12.5.0",
-    "codemirror-theme-vars": "^0.1.2",
-    "katex": "^0.16.9",
-    "markdown-it": "^13.0.2",
-    "markdown-it-katex": "^2.0.3",
-    "playwright-chromium": "^1.40.1",
-    "prism-theme-vars": "^0.2.4",
-    "theme-vitesse": "^0.7.5",
-    "unplugin-icons": "^0.18.1"
-  },
-  "slidev": {
-    "colorSchema": "light",
-    "defaults": {
-      "titleTemplate": "%s",
-      "theme": ".",
-      "layout": "default",
-      "exportFilename": "../slides.pdf",
-      "fonts": {
-        "weights": "100,200,300,400,500,600,700,800,900"
-      },
-      "aspectRatio": "16/9",
-      "css": "windicss"
-    }
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.13.0",
-    "fs-extra": "^11.3.0"
+    "@iconify-json/tabler": "^1.2.15",
+    "playwright-chromium": "^1.37.1"
+  },
+  "slidev": {
+    "colorSchema": "both"
   }
 }
