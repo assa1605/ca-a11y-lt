@@ -32,6 +32,7 @@ const playAnimation = (animationName) => {
 
 onMounted(() => {
   try {
+    console.log("Initializing Rive animation...");
     const r = new Rive({
       src: "/assets/rive/like.riv",
       canvas: canvas.value,
@@ -43,10 +44,13 @@ onMounted(() => {
       }),
       onLoad: () => {
         console.log("Rive file loaded successfully");
+        error.value = null;
       },
       onLoadError: (err) => {
         console.error("Failed to load Rive file:", err);
-        error.value = `Riveファイルの読み込みに失敗しました: ${err.message}`;
+        error.value = `Riveファイルの読み込みに失敗しました: ${
+          err.message || "ファイルが見つかりません"
+        }`;
       }
     });
 

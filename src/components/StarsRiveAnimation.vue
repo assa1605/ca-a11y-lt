@@ -51,16 +51,6 @@ onMounted(() => {
     }),
     autoplay: false
   });
-
-  r.on("load", () => {
-    try {
-      console.log("Available animations:", r.animationNames);
-      riveInstance.value = r;
-      playAnimation(0); // 初期状態として空の星を表示
-    } catch (e) {
-      console.error("Failed to initialize:", e);
-    }
-  });
 });
 </script>
 

@@ -3,6 +3,8 @@ import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
   plugins: [vue()],
+  publicDir: "public",
+  assetsInclude: ["**/*.riv"],
   build: {
     assetsInlineLimit: 0,
     rollupOptions: {
@@ -16,6 +18,10 @@ export default defineConfig({
       }
     }
   },
-  publicDir: "public",
-  assetsInclude: ["**/*.riv"]
+  server: {
+    fs: {
+      // publicディレクトリへのアクセスを許可
+      allow: ["public"]
+    }
+  }
 });
