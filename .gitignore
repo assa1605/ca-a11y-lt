@@ -8,3 +8,4 @@ components.d.ts
 slides-with-clicks.pdf
 slides.pdf
 *.log
+.yarn/
