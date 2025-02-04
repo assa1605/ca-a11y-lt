@@ -90,7 +90,7 @@ layout: two-cols
 
 - 複雑なアニメーションの作成が簡単(プログラミング不要)
 - 作ったアニメーションをGUI上ですぐに確認
-- Lottie と比べても圧倒的に軽い
+- Lottie と比べてファイルサイズが圧倒的に軽い
   - [rive-as-a-lottie-alternative](https://rive.app/blog/rive-as-a-lottie-alternative)
 
 ::right::
