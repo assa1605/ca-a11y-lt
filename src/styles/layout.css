@@ -19,16 +19,16 @@
     @apply font-semibold text-slate-800;
   }
   h1 {
-    @apply text-3xl my-2;
+    @apply text-4xl mt-6 mb-8;
   }
   h2 {
-    @apply text-2xl my-2;
+    @apply text-3xl mt-6 mb-8;
   }
   h3 {
-    @apply text-xl my-1;
+    @apply text-2xl mt-6 mb-8;
   }
   h4 {
-    @apply text-lg my-1;
+    @apply text-xl mt-6 mb-8;
   }
 }
 
@@ -59,66 +59,64 @@ html.dark .slidev-layout.cover {
   }
 }
 
+/* Layout styles */
 .slidev-layout {
-  @apply px-14 py-10 text-[1.1rem];
+  @apply px-14 py-10 text-[1.1rem] h-full;
+}
 
-  h1 {
-    @apply text-4xl mb-4 font-bold text-gray-900;
-  }
+/* List styles */
+.slidev-layout ul {
+  @apply text-2xl leading-10;
+}
 
-  h2 {
-    @apply text-3xl mb-4 font-bold text-gray-800;
-  }
+.slidev-layout ul li {
+  @apply mb-2;
+}
 
-  h3 {
-    @apply text-2xl mb-4 font-bold text-gray-800;
-  }
+.slidev-layout ul li a {
+  @apply text-blue-500 no-underline hover:underline;
+}
 
-  p {
-    @apply mb-4 leading-6;
-  }
+.slidev-layout p {
+  @apply mb-4 leading-6;
+}
 
-  ul {
-    list-style: disc;
-  }
+.slidev-layout ul {
+  list-style: disc;
+}
 
-  ol {
-    list-style: decimal;
-  }
+.slidev-layout ol {
+  list-style: decimal;
+}
 
-  ul,
-  ol {
-    @apply ml-4 mb-4;
-  }
+.slidev-layout ul,
+.slidev-layout ol {
+  @apply ml-4 mb-4;
+}
 
-  a {
-    @apply underline decoration-dashed !border-0 underline-offset-1 decoration-2 font-medium text-blue-[#3070b3] hover:!decoration-solid;
-  }
+.slidev-layout a {
+  @apply underline decoration-dashed !border-0 underline-offset-1 decoration-2 font-medium text-blue-[#3070b3] hover:!decoration-solid;
+}
 
-  img {
-    @apply rounded-md;
-  }
+.slidev-layout img {
+  @apply rounded-md;
+}
 
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  ol,
-  ul {
-    code {
-      @apply bg-[#e9eef4] px-1 text-slate-800 font-bold;
-    }
+.slidev-layout p,
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4,
+.slidev-layout ol,
+.slidev-layout ul {
+  code {
+    @apply bg-[#e9eef4] px-1 text-slate-800 font-bold;
   }
+}
 
-  code::before,
-  code::after {
-    @apply hidden;
-  }
-
-  h2 {
-    @apply text-[#3070B3] font-bold mb-4 text-2xl;
-  }
+.slidev-layout code::before,
+.slidev-layout code::after {
+  @apply hidden;
 }
 
 html.dark .slidev-layout {
@@ -135,4 +133,16 @@ html.dark .slidev-layout {
   li {
     @apply text-gray-300;
   }
+}
+
+/* Quote styles */
+.slidev-layout blockquote {
+  @apply border-l-4 border-gray-300 pl-4 py-2 my-4 text-gray-700;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.slidev-layout blockquote p {
+  margin: 0;
+  line-height: inherit;
 }

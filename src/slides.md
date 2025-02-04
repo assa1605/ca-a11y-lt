@@ -10,36 +10,103 @@ hideInToc: true
 
 # Rive アニメーションとアクセシビリティ
 
-## Demo Presentation
+## デモンストレーションを添えて
+
+---
+layout: default
+---
+
+# 自己紹介
+
+<div class="flex justify-between items-center">
+  <div class="flex-1">
+    <div class="text-3xl mb-4">
+      浅原昌大(あさはら まさひろ)
+    </div>
+    <div class="text-2xl mb-8">
+      株式会社サイバーエージェント
+    </div>
+
+   - X: [@assa1605](https://x.com/assa1605)
+   - Github: [@assa1605](https://github.com/assa1605)
+    
+  </div>
+
+  <div class="flex-1 flex justify-center">
+    <img src="https://github.com/assa1605.png" class="w-80 rounded-lg"/>
+  </div>
+</div>
 
 ---
 
-This is a demo presentation containing the features of our template for [**Slidev**](https://sli.dev/). Slidev is a markdown presentation tool - a mixture of PowerPoint and Latex - write your presentation in a plain text file using markdown syntax and the PDF will be rendered by Slidev. You don't have to worry about formatting and can focus on the content. Your presentations will look consistent and simple.
+# アジェンダ
 
-<br/>
-
-**How to get started:**
-
-1. Read the Slidev intro: https://sli.dev/guide/
-2. Get familiar with the file structure: https://sli.dev/guide/syntax.html
-3. Look into the demo document: [Markdown file](https://github.com/dostuffthatmatters/pyra-4-presentation/blob/main/docs/slides.example.md?plain=1) | [PDF](https://github.com/dostuffthatmatters/pyra-4-presentation/blob/main/docs/slides.example.pdf).
-4. Create your own presentation by cloning or forking [this template repository](https://github.com/tum-esm/tum-esm-slidev-template)
-
-<br/>
-
-If you have **issues, comments, or ideas for this template**, please create an issue [here](https://github.com/tum-esm/tum-esm-slidev-template/issues).
+<Toc maxDepth="2"/>
 
 ---
-hideInToc: true
+layout: default
 ---
 
-# Contents of this Demo
+# Riveとは？
 
-<Toc maxDepth="1"/>
+- インタラクティブなアニメーションを作成・実装するためのツール
+- クロスプラットフォーム対応
+    - React, Vue, Angular、React Native, Flutter, iOS, Android, C#
+
+<div class="flex justify-center">
+    <img src="/assets/slides/dragon.gif" class="w-80"/>
+</div>
+
+
+
+---
+layout: two-cols
+---
+## Riveのメリット👏
+
+- 複雑なアニメーションの作成が簡単(プログラミング不要)
+- 作ったアニメーションをGUI上ですぐに確認
+- Lottie と比べても圧倒的に軽い
+  - [rive-as-a-lottie-alternative](https://rive.app/blog/rive-as-a-lottie-alternative)
+
+::right::
+
+<div class="flex flex-col justify-center h-full">
+    <div class="flex justify-end">
+        <img src="/assets/slides/dog.gif" class="w-128"/>
+    </div>
+    <div class="mt-4 text-sm text-center">
+     Riveのツール上でアニメーションを実行している様子
+    </div>
+</div>
+
+
+
+---
+layout: default
+---
+
+# アクセシビリティの考慮
+
+## Rive 公式による実装例
+
+- **ARIA live regions のコントロール**
+    - 動的コンテンツの変更を支援技術に通知
+    - スクリーンリーダーユーザーへのアニメーション説明
+
+## prefers-reduced-motionの活用
+
+- ユーザーの設定に応じてアニメーションを調整
+- 動きによる不快感を軽減
+- OS設定との連携
+    - Windows 10：設定 > 簡単操作 > ディスプレイ
+    - macOS：システム設定 > アクセシビリティ > 表示
+    - iOS：設定 > アクセシビリティ > 視覚効果を減らす
+    - Android：設定 > ユーザー補助 > アニメーション
 
 ---
 
-# Available Layouts
+# Rive について
 
 -   `default`
 -   `cover`
@@ -77,6 +144,7 @@ Aute voluptate consectetur cillum nulla aliqua incididunt non est sunt aliqua ut
 <img src="https://images.unsplash.com/photo-1612334001559-947862cc2202?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80" style="width: 300px; border-radius: 0.5rem;"/>
 
 ---
+
 layout: two-cols
 ---
 
@@ -91,14 +159,6 @@ Adipisicing Lorem et quis magna consequat ut irure tempor eu dolor nisi. Do irur
 Sunt ex ut ad nisi laboris veniam qui fugiat ex. Labore quis ipsum pariatur incididunt ad qui Lorem ipsum est minim labore ipsum dolore labore. Proident aliqua fugiat ex consectetur ullamco anim aliquip nostrud in in veniam reprehenderit ad.
 
 ---
-layout: center
----
-
-## Layout `center`
-
-Adipisicing est aliqua ea Lorem amet ut voluptate.
-
----
 
 # Markdown Examples
 
@@ -111,17 +171,6 @@ Adipisicing est aliqua ea Lorem amet ut voluptate.
 -   lists
 -   quotes
 
----
-hideInToc: true
----
-
-# Heading 1 `<h1>...</h1>`
-
-## Heading 2 `<h2>...</h2>`
-
-### Heading 3 `<h3>...</h3>`
-
-#### Heading 4 `<h4>...</h4>`
 
 ---
 
@@ -133,54 +182,30 @@ You can also use subscript (O<sub>2</sub>) or superscript (x<sup>2</sup>).
 
 ---
 
-## Math
-
-Inline math: Increasing $CO_2$ and $CH_4$ concentrations are harmful to our climate.
-
-Block math:
-
-$$
-\begin{align*}{}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t}
-&= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &= \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} &= 0
-
-\end{align*}
-$$
-
----
-
-## Icons
-
-**You can use all [tabler icons](https://tabler-icons.io/):**
-
-&nbsp;<tabler-components class="text-green-600 bg-green-100 p-1 w-6 h-6 rounded-md"/> item 1
-
-&nbsp;<tabler-bug class="text-green-600 bg-green-100 p-1 w-6 h-6 rounded-md"/> item 2
-
-&nbsp;<tabler-adjustments-horizontal class="text-green-600 bg-green-100 p-1 w-6 h-6 rounded-md"/> item 3
-
-&nbsp;<tabler-hierarchy class="text-green-600 bg-green-100 p-1 w-6 h-6 rounded-md"/> item 4
-
-&nbsp;<tabler-terminal-2 class="text-green-600 bg-green-100 p-1 w-6 h-6 rounded-md"/> item 5
-
----
 
 ## Code Blocks
 
-
 <br/>
 
-**TypeScript example:**
+**prefers-reduced-motionの設定を:**
 
 ```ts
-function add(a: Ref<number> | number, b: Ref<number> | number) {
-    return computed(() => unref(a) + unref(b));
-}
+"use client";
+
+import { useEffect, useState } from "react";
+
+export const usePrefersReducedMotion = () => {
+  const [isPrefersReducedMotion, setIsPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    setIsPrefersReducedMotion(
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    );
+  }, []);
+
+  return isPrefersReducedMotion;
+};
+
 ```
 
 ---
@@ -215,6 +240,24 @@ Pariatur quis nisi et incididunt id ea labore adipisicing dolore pariatur Lorem 
 
 Eu amet non ad mollit dolore culpa laborum sunt eiusmod amet ipsum sit elit. Enim consectetur nostrud sunt id ad minim proident do nulla ullamco eu. Sint sunt cillum eu dolore nisi consequat id. Pariatur dolore nostrud voluptate fugiat enim veniam veniam. Nisi qui sint in minim aliqua sunt dolore qui et veniam quis dolor consequat. Pariatur laboris cupidatat aliqua ipsum sunt exercitation dolor.
 
+
+This is a demo presentation containing the features of our template for [**Slidev**](https://sli.dev/). Slidev is a markdown presentation tool - a mixture of PowerPoint and Latex - write your presentation in a plain text file using markdown syntax and the PDF will be rendered by Slidev. You don't have to worry about formatting and can focus on the content. Your presentations will look consistent and simple.
+
+<br/>
+
+**How to get started:**
+
+1. Read the Slidev intro: https://sli.dev/guide/
+2. Get familiar with the file structure: https://sli.dev/guide/syntax.html
+3. Look into the demo document: [Markdown file](https://github.com/dostuffthatmatters/pyra-4-presentation/blob/main/docs/slides.example.md?plain=1) | [PDF](https://github.com/dostuffthatmatters/pyra-4-presentation/blob/main/docs/slides.example.pdf).
+4. Create your own presentation by cloning or forking [this template repository](https://github.com/tum-esm/tum-esm-slidev-template)
+
+<br/>
+
+If you have **issues, comments, or ideas for this template**, please create an issue [here](https://github.com/tum-esm/tum-esm-slidev-template/issues).
+
+
+
 ---
 
 # Rive アニメーション
@@ -236,3 +279,15 @@ Eu amet non ad mollit dolore culpa laborum sunt eiusmod amet ipsum sit elit. Eni
   </div>
 </div>
 
+
+
+---
+layout: center
+---
+
+# ご清聴ありがとうございました
+
+アクセシビリティに配慮したアニメーションで、
+より良いユーザー体験を提供しましょう
+
+---
