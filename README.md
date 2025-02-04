@@ -1,6 +1,6 @@
 # Rive Animation and Accessibility
 
-This project demonstrates interactive UI components using Rive animations with accessibility considerations.
+This presentation covers interactive UI components using Rive animations with accessibility considerations.
 
 ## Tech Stack
 
@@ -59,4 +59,4 @@ The project includes the following Rive animations in `src/assets/rive/`:
 - `like.riv` - Like button animation
 - `stars.riv` - Star rating animation
 
-These animations are automatically copied to the `dist` directory during the build process.
+Rive animations are properly bundled into the `dist` directory as part of the build optimization process.
