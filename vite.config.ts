@@ -9,12 +9,13 @@ export default defineConfig({
       output: {
         assetFileNames: (assetInfo) => {
           if (assetInfo?.name?.endsWith(".riv")) {
-            return "assets/rive/[name][extname]";
+            return "assets/[name][extname]";
           }
           return "assets/[name]-[hash][extname]";
         }
       }
     }
   },
-  publicDir: "public"
+  publicDir: "public",
+  assetsInclude: ["**/*.riv"]
 });
