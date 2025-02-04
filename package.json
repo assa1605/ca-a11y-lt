@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build src/slides.md --out dist && mkdir -p dist/assets/rive && cp src/assets/rive/*.riv dist/assets/rive/",
+    "build": "slidev build src/slides.md --out ../dist && mkdir -p dist/assets/rive && cp src/assets/rive/*.riv dist/assets/rive/",
     "dev": "slidev src/slides.md --open",
     "export": "slidev export src/slides.md",
     "export-notes": "slidev export-notes src/slides.md"
