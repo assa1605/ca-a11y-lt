@@ -200,13 +200,13 @@ export const usePrefersReducedMotion = () => {
 
 ## 実際に体験してみよう！
 
-- iOS：設定 > 一般 > アクセシビリティ > 視覚効果を減らす
-- Android 9 以上：設定 > ユーザー補助 > アニメーションの削除
+- iOS：設定 > アクセシビリティ > 動作 > 視覚効果を減らす
+- Android：設定 > ユーザー補助 > 表示 > アニメーションを無効にする
 
 <div class="text-sm font-bold text-red-500">↑の設定が終わったら、このスライドを再度読み込みしてみてください</div>
 
 
-犬の尻尾が動かなかったらアニメーションの削除ができてます
+読み込み時に犬の尻尾が自動で動くように設定しています
 
 <div class="flex justify-center mt-2 gap-12">
   <div class="flex flex-col items-center gap-4">
