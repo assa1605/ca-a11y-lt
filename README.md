@@ -1,19 +1,15 @@
-# 🌋 TUM ESM Slidev Template
+# Rive Animation and Accessibility
 
-Demo presentation: [docs/slides.example.pdf](https://github.com/tum-esm/slidev-template/raw/main/docs/slides.example.pdf)<br/>
-Documentation about **Slidev**: [https://sli.dev/](https://sli.dev/)
+This project demonstrates interactive UI components using Rive animations with accessibility considerations.
 
-**Usage:** Write your slide content into `src/slides.md`.
+## Tech Stack
 
-```bash
-# start development mode -> now open localhost:... in your browser
-./develop.sh
+- [Slidev](https://sli.dev/) - Presentation framework
+- [Rive](https://rive.app/) - Interactive animations
+- Accessibility implementation
 
-# export slides -> `slides.pdf` and `slides-with-clicks.pdf` created
-./export.sh
+## Getting Started
 
-# export example slides in `docs/`
-./export-example.sh
-```
-
-🐘 The PDFs exported by Slidev can be pretty large. If you have **Ghostscript** (https://www.ghostscript.com/) installed on your system, the export scripts will automatically compress the PDFs.
+1. Clone the repository
+2. Install dependencies
+3. yarn dev
