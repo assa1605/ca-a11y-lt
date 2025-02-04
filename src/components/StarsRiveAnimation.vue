@@ -51,6 +51,8 @@ onMounted(() => {
     }),
     autoplay: false
   });
+
+  riveInstance.value = r;
 });
 </script>
 
