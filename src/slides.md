@@ -200,15 +200,25 @@ export const usePrefersReducedMotion = () => {
 
 ## 実際に体験してみよう！
 
-通常表示とreduced-motion時の比較
-
-
-
-
-- macOS：システム設定 > アクセシビリティ > 表示 > 動きの抑制
 - iOS：設定 > 一般 > アクセシビリティ > 視覚効果を減らす
 - Android 9 以上：設定 > ユーザー補助 > アニメーションの削除
 
+<div class="text-sm font-bold text-red-500">↑の設定が終わったら、このスライドを再度読み込みしてみてください</div>
+
+
+犬の尻尾が動かなかったらアニメーションの削除ができてます
+
+<div class="flex justify-center mt-2 gap-12">
+  <div class="flex flex-col items-center gap-4">
+    <div class="text-xl font-medium">対応なし</div>
+        <NoReducedMotionRiveAnimation />
+  </div>
+
+  <div class="flex flex-col items-center gap-4">
+    <div class="text-xl font-medium">prefers-reduced-motion に対応</div>
+        <ReducedMotionRiveAnimation />
+  </div>
+</div>
 
 <div class="absolute bottom-8 right-8">
   <img src="/assets/slides/qr.png" class="w-32"/>
@@ -219,7 +229,8 @@ export const usePrefersReducedMotion = () => {
 layout: center
 ---
 
-# ご清聴ありがとうございました
+# ご清聴ありがとうございました 🙌
 
-アクセシビリティに配慮したアニメーションで、
-より良いユーザー体験を提供しましょう
+- 👉 スライド: https://ca-a11y-lt.vercel.app
+- 📦 リポジトリ: https://github.com/assa1605/ca-a11y-lt
+

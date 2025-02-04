@@ -12,14 +12,7 @@ This project demonstrates interactive UI components using Rive animations with a
 
 ### Setup
 
-1. Clone the repository:
-
-```bash
-git clone https://github.com/your-username/ca-a11y-lt.git
-cd ca-a11y-lt
-```
-
-2. Install dependencies:
+Install dependencies:
 
 ```bash
 yarn install
