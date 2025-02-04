@@ -2,11 +2,10 @@
 
 This presentation covers interactive UI components using Rive animations with accessibility considerations.
 
-## Tech Stack
+## Tools Used
 
 - [Slidev](https://sli.dev/) - Presentation framework
 - [Rive](https://rive.app/) - Interactive animations
-- Accessibility implementation
 
 ## Development
 
