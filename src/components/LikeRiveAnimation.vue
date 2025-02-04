@@ -29,7 +29,7 @@ const playAnimation = (animationName) => {
 
 onMounted(() => {
   const r = new Rive({
-    src: "/assets/rive/like.riv",
+    src: "../assets/rive/like.riv",
     canvas: canvas.value,
     stateMachines: "State Machine 1",
     autoplay: true,
