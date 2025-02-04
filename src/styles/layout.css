@@ -1,0 +1,84 @@
+:root {
+    // default theme color
+    // can be overrided by uses `themeConfig` option
+    --slidev-theme-primary: #5d8392;
+}
+
+* {
+    @apply p-0 m-0 box-border;
+}
+
+.slidev-layout.default,
+.slidev-layout.center,
+.slidev-layout.two-cols,
+.slidev-layout.text-image-split {
+    h1,
+    h2,
+    h3,
+    h4 {
+        @apply font-semibold text-slate-800;
+    }
+    h1 {
+        @apply text-3xl my-2;
+    }
+    h2 {
+        @apply text-2xl my-2;
+    }
+    h3 {
+        @apply text-xl my-1;
+    }
+    h4 {
+        @apply text-lg my-1;
+    }
+}
+
+.slidev-layout.cover {
+    h1 {
+        @apply text-4xl font-semibold text-slate-800 my-0 text-white;
+    }
+    h2 {
+        @apply text-xl uppercase text-blue-[#93C7FF] font-regular mt-2;
+    }
+    h1,
+    h2 {
+        code {
+            @apply bg-slate-700 text-slate-200;
+        }
+    }
+
+    // CAREFUL: Styles have only been defined for h1 and h2
+}
+
+.slidev-layout {
+    a {
+        @apply underline decoration-dashed !border-0 underline-offset-1 decoration-2 font-medium text-blue-[#3070b3] hover:!decoration-solid;
+    }
+
+    img {
+        @apply rounded-md;
+    }
+
+    ol,
+    ul {
+        li {
+            @apply !leading-tight my-3;
+        }
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    ol,
+    ul {
+        code {
+            @apply bg-[#e9eef4] px-1 text-slate-800 font-bold;
+        }
+    }
+
+    code::before,
+    code::after {
+        @apply hidden;
+    }
+}
