@@ -79,7 +79,7 @@ layout: default
   </div>
 </div>
 
-<div class="absolute bottom-8 right-8">
+<div class="absolute bottom-12 right-8">
   <img src="/assets/slides/qr.png" class="w-32"/>
 </div>
 
@@ -220,7 +220,7 @@ export const usePrefersReducedMotion = () => {
   </div>
 </div>
 
-<div class="absolute bottom-8 right-8">
+<div class="absolute bottom-12 right-8">
   <img src="/assets/slides/qr.png" class="w-32"/>
 </div>
 

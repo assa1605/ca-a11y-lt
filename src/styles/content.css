@@ -2,6 +2,11 @@
   @apply bg-green-50 rounded-r-lg border-l-6 border-green-500 text-green-800;
 }
 
+/* Dark mode styles for blockquote */
+html.dark .slidev-layout blockquote {
+  @apply bg-green-900/30 border-green-400 text-green-200;
+}
+
 .slidev-layout table {
   th {
     @apply font-bold;
