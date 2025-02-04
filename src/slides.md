@@ -8,7 +8,7 @@ layout: cover
 hideInToc: true
 ---
 
-# <img src="https://d33wubrfki0l68.cloudfront.net/273aa82ec83b3e4357492a201fb68048af1c3e6a/8f657/logo.svg" style="width:32px; height: 36px; display: inline; padding-bottom: 4px;"/> Rive アニメーションとアクセシビリティ
+# Rive アニメーションとアクセシビリティ
 
 ## Demo Presentation
 
@@ -172,12 +172,6 @@ $$
 
 ## Code Blocks
 
-**Python example:**
-
-```python
-def add(a: int, b: int):
-    return a + b
-```
 
 <br/>
 
@@ -191,15 +185,7 @@ function add(a: Ref<number> | number, b: Ref<number> | number) {
 
 ---
 
-## Tables
 
-| left            |  centered  |             right |
-| :-------------- | :--------: | ----------------: |
-| do exercitation | irure elit |               qui |
-| amet            |   velit    | ad cupidatat quis |
-| esse ex         |            |                   |
-
----
 
 ## Lists
 

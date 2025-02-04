@@ -21,6 +21,6 @@
     "playwright-chromium": "^1.37.1"
   },
   "slidev": {
-    "colorSchema": "both"
+    "colorSchema": "light"
   }
 }

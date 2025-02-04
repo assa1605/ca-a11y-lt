@@ -1,0 +1,59 @@
+/* Global styles */
+:root {
+  --slidev-theme-primary: #5d8392;
+  color-scheme: light;
+}
+
+/* Force light mode by default */
+html {
+  color-scheme: light;
+}
+
+/* Default text color */
+.slidev-layout {
+  @apply text-gray-900;
+  background-color: #ffffff;
+}
+
+/* Dark mode text color */
+html.dark .slidev-layout {
+  @apply text-gray-100;
+  background-color: #121212;
+}
+
+/* Ensure links are visible in both light and dark modes */
+.slidev-layout a {
+  color: var(--slidev-theme-primary);
+}
+
+/* Make text more readable on mobile */
+@media (max-width: 768px) {
+  .slidev-layout {
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+}
+
+/* Light mode specific styles (default) */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4,
+.slidev-layout h5,
+.slidev-layout h6,
+.slidev-layout p,
+.slidev-layout li {
+  @apply text-gray-900;
+}
+
+/* Dark mode specific styles (only when explicitly enabled) */
+html.dark .slidev-layout h1,
+html.dark .slidev-layout h2,
+html.dark .slidev-layout h3,
+html.dark .slidev-layout h4,
+html.dark .slidev-layout h5,
+html.dark .slidev-layout h6,
+html.dark .slidev-layout p,
+html.dark .slidev-layout li {
+  @apply text-gray-100;
+}
