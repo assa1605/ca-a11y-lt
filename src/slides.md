@@ -26,7 +26,7 @@ layout: default
     </div>
 
    - X: [@assa1605](https://x.com/assa1605)
-   - Github: [@assa1605](https://github.com/assa1605)
+   - GitHub: [@assa1605](https://github.com/assa1605)
     
   </div>
 
