@@ -79,6 +79,12 @@ layout: default
   </div>
 </div>
 
+<div class="flex justify-center mt-20">
+  <div class="text-sm text-gray-500">
+    素材元：<a href="https://github.com/lllttt06/ca_flutter_slide" target="_blank" rel="noopener">github.com/lllttt06/ca_flutter_slide</a>
+  </div>
+</div>
+
 <div class="absolute bottom-12 right-8">
   <img src="/assets/slides/qr.png" class="w-32"/>
 </div>
