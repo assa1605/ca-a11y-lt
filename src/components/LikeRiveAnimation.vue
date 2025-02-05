@@ -12,27 +12,36 @@ import { Layout, Fit, Alignment } from "@rive-app/canvas";
 const canvas = ref(null);
 const riveInstance = shallowRef(null);
 
-const playAnimation = (animationName) => {
+const triggerAnimation = () => {
   if (riveInstance.value) {
-    riveInstance.value.play(animationName);
+    riveInstance.value.play("Pressed");
   }
 };
 
+const playAnimation = (animationName) => {
+  if (!riveInstance.value) {
+    return;
+  }
+  riveInstance.value.play(animationName);
+};
+
+const createRive = () => {
+  const r = new Rive({
+    src: "/assets/rive/like.riv",
+    canvas: canvas.value,
+    layout: new Layout({
+      fit: Fit.Contain,
+      alignment: Alignment.Center
+    })
+  });
+
+  riveInstance.value = r;
+};
+
 onMounted(() => {
-  setTimeout(async () => {
-    const r = new Rive({
-      src: "/assets/rive/like.riv",
-      canvas: canvas.value,
-      layout: new Layout({
-        fit: Fit.Contain,
-        alignment: Alignment.Center
-      })
-    });
-
-    riveInstance.value = r;
-  }, 200); //HACK: 初期ロードで表示されないので遅延を入れる
+  createRive();
+  triggerAnimation();
 });
-
 </script>
 
 <style scoped>

@@ -12,7 +12,7 @@ import { Layout, Fit, Alignment } from "@rive-app/canvas";
 const canvas = ref(null);
 const riveInstance = shallowRef(null);
 
-onMounted(() => {
+const createRive = () => {
   const r = new Rive({
     src: "/assets/rive/dog.riv",
     canvas: canvas.value,
@@ -24,6 +24,10 @@ onMounted(() => {
   });
 
   riveInstance.value = r;
+};
+
+onMounted(() => {
+  createRive();
 });
 </script>
 

@@ -12,9 +12,7 @@ import { Layout, Fit, Alignment } from "@rive-app/canvas";
 const canvas = ref(null);
 const riveInstance = shallowRef(null);
 
-onMounted(() => {
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+const createRive = (prefersReducedMotion) => {
   const r = new Rive({
     src: "/assets/rive/dog.riv",
     canvas: canvas.value,
@@ -26,6 +24,14 @@ onMounted(() => {
   });
 
   riveInstance.value = r;
+};
+
+onMounted(() => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  createRive(prefersReducedMotion);
 });
 </script>
 

@@ -17,12 +17,8 @@ const playAnimation = (rating) => {
   if (!riveInstance.value) return;
 
   const animationName = rating === 0 ? "Idle_empty" : `${rating}_stars`;
-  try {
-    riveInstance.value.play(animationName);
-    currentRating.value = rating;
-  } catch (e) {
-    console.error(`Failed to play animation: ${animationName}`, e);
-  }
+  riveInstance.value.play(animationName);
+  currentRating.value = rating;
 };
 
 const handleClick = (event) => {
@@ -41,22 +37,24 @@ const handleClick = (event) => {
   }
 };
 
+const createRive = () => {
+  const r = new Rive({
+    src: "/assets/rive/stars.riv",
+    canvas: canvas.value,
+    layout: new Layout({
+      fit: Fit.Contain,
+      alignment: Alignment.Center
+    }),
+    autoplay: false
+  });
+
+  riveInstance.value = r;
+};
+
 onMounted(() => {
-  setTimeout(async () => {
-    const r = new Rive({
-      src: "/assets/rive/stars.riv",
-      canvas: canvas.value,
-      layout: new Layout({
-        fit: Fit.Contain,
-        alignment: Alignment.Center
-      }),
-      autoplay: false
-    });
-
-    riveInstance.value = r;
-  }, 300); //HACK: 初期ロードで表示されないので遅延を入れる
+  createRive();
+  playAnimation(0);
 });
-
 </script>
 
 <style scoped>
