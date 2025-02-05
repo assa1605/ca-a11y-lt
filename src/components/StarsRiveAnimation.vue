@@ -42,18 +42,21 @@ const handleClick = (event) => {
 };
 
 onMounted(() => {
-  const r = new Rive({
-    src: "/assets/rive/stars.riv",
-    canvas: canvas.value,
-    layout: new Layout({
-      fit: Fit.Contain,
-      alignment: Alignment.Center
-    }),
-    autoplay: false
-  });
+  setTimeout(async () => {
+    const r = new Rive({
+      src: "/assets/rive/stars.riv",
+      canvas: canvas.value,
+      layout: new Layout({
+        fit: Fit.Contain,
+        alignment: Alignment.Center
+      }),
+      autoplay: false
+    });
 
-  riveInstance.value = r;
+    riveInstance.value = r;
+  }, 300); //HACK: 初期ロードで表示されないので遅延を入れる
 });
+
 </script>
 
 <style scoped>
