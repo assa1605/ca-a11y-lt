@@ -80,7 +80,7 @@ layout: default
 </div>
 
 <div class="flex justify-center mt-20">
-  <div class="text-sm text-gray-500">
+  <div class="text-sm text-gray-500 italic" >
     素材元：<a href="https://github.com/lllttt06/ca_flutter_slide" target="_blank" rel="noopener">github.com/lllttt06/ca_flutter_slide</a>
   </div>
 </div>

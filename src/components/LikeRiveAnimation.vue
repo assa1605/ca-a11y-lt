@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="rive-container"
-    @click="playAnimation('Pressed')"
-  >
+  <div class="rive-container" @click="playAnimation('Pressed')">
     <canvas ref="canvas"></canvas>
   </div>
 </template>
@@ -22,18 +19,18 @@ const playAnimation = (animationName) => {
 };
 
 onMounted(() => {
-  const r = new Rive({
-    src: "/assets/rive/like.riv",
-    canvas: canvas.value,
-    stateMachines: "State Machine 1",
-    autoplay: true,
-    layout: new Layout({
-      fit: Fit.Contain,
-      alignment: Alignment.Center
-    })
-  });
+  setTimeout(async () => {
+    const r = new Rive({
+      src: "/assets/rive/like.riv",
+      canvas: canvas.value,
+      layout: new Layout({
+        fit: Fit.Contain,
+        alignment: Alignment.Center
+      })
+    });
 
-  riveInstance.value = r;
+    riveInstance.value = r;
+  }, 100); //HACK: 初期ロードで表示されないので、100msの遅延を入れる
 });
 </script>
 
