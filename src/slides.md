@@ -94,9 +94,9 @@ layout: two-cols
 ---
 ## Riveのメリット
 
-- 複雑なアニメーションの作成が簡単(プログラミング不要)
+- 複雑なアニメーションの作成が簡単
 - 作ったアニメーションをGUI上ですぐに確認
-- Lottie と比べてファイルサイズが圧倒的に軽い
+- アニメーションのファイルサイズが軽量
   - [rive-as-a-lottie-alternative](https://rive.app/blog/rive-as-a-lottie-alternative)
 
 ::right::
